@@ -2,8 +2,8 @@ const express = require("express");
 const db = require("./src/config/connection");
 const route = require("./src/routes");
 const cors = require("cors");
-const PORT = 9000;
 const app = express();
+
 
 db.connect();
 
@@ -16,6 +16,6 @@ app.get("/", (req, res) => {
 // Routes init
 route(app);
 
-app.listen(PORT, () => {
-  console.log(`Connect to server is successfully with PORT: ${PORT}`);
-});
+app.listen(process.env.PORT || 9000 ,()=>{
+  console.log(`Connect to server is successfully with PORT:`);
+})
