@@ -1,0 +1,14 @@
+.wrapper {
+    .container {
+        display: flex;
+
+        .left,
+        .right {
+            flex: 1;
+        }
+
+        .right {
+            margin: 0 10px;
+        }
+    }
+}

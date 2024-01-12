@@ -1,0 +1,118 @@
+.wrapper {
+    height: 750px;
+    margin-right: 10px;
+    background-color: var(--primary);
+    box-shadow: var(--box-shadow-all);
+
+    .icons-white {
+        color: var(--primary);
+    }
+
+    .button,
+    .menu {
+        padding: 10px 0;
+
+        .dropdown,
+        .add {
+            height: 40px;
+            display: flex;
+        }
+    }
+
+    .button {
+        display: flex;
+    }
+
+    .left,
+    .right {
+        position: sticky;
+        top: 0;
+
+        .logo {
+            h1 {
+                width: 60px;
+                height: 50px;
+                display: flex;
+                justify-content: center;
+            }
+        }
+
+        .name {
+            width: 200px;
+            display: grid;
+            align-items: center;
+            grid-template-columns: 185px 50px;
+            grid-template-rows: 50px;
+
+            .toggle {
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                display: grid;
+                border: none;
+                align-items: center;
+                justify-content: center;
+                z-index: 999999;
+                cursor: pointer;
+                background-color: var(--button);
+                box-shadow: var(--box-shadow-all);
+
+                .icons-white {
+                    width: 10px;
+                    height: 100%;
+                }
+            }
+        }
+    }
+
+    .right {
+        .icon-btn,
+        .icon-btn-dot,
+        .tag {
+            display: flex;
+            align-items: center;
+        }
+        .icon-btn {
+            width: 60px;
+            height: 40px;
+            font-size: 20px;
+            justify-content: center;
+        }
+
+        .icon-btn-dot {
+            width: 60px;
+            height: 40px;
+            font-size: 10px;
+            justify-content: center;
+        }
+
+        .tag {
+            width: 200px;
+            display: flex;
+            padding-right: 5px;
+            justify-content: space-between;
+
+            p {
+                font-size: 13px;
+            }
+        }
+
+        .tag-dropdown {
+            font-weight: bold;
+        }
+    }
+
+    .sidebar-open .name,
+    .sidebar-open .tag {
+        width: 200px;
+        transform: translateX(0);
+        transition: width 0.3s, transform 0.3s;
+    }
+
+    .sidebar-closed .name,
+    .sidebar-closed .tag {
+        width: 0;
+        transform: translateX(-200px);
+        transition: width 0.3s, transform 0.3s;
+    }
+}
